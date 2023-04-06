@@ -1,0 +1,176 @@
+{
+  "slide1": {
+    "title": "Introduction to Python",
+    "speaker_notes": "Python is a versatile and powerful programming language. Suitable for beginners and experienced developers. Used across various domains, including web development, data science, and AI."
+  },
+  "slide2": {
+    "title": "Brief History and Popularity",
+    "content": "Created by Guido van Rossum in 1991. Designed for readability and ease of use. Widely used in various industries: web development, data science, artificial intelligence, and more. Strong community support and extensive libraries.",
+    "speaker_notes": "Python has grown in popularity due to its simplicity and readability. The language has a large, active community that continues to develop libraries and frameworks. Python's versatility has made it a popular choice for both small and large-scale projects."
+  },
+  "slide3": {
+    "title": "Differences Between Python and JavaScript/Java",
+    "content": "Python is an interpreted language, while Java is compiled to bytecode. Python has dynamic typing, while Java has static typing. Python uses indentation for blocks, while Java and JavaScript use curly braces. Python has a more concise syntax compared to Java. Python uses snake_case for naming, while Java and JavaScript use camelCase.",
+    "speaker_notes": "Python's design philosophy focuses on readability and simplicity. The differences in syntax and language features make Python easier to learn and write for many developers. Understanding these differences helps your students transition from Java and JavaScript to Python."
+  },
+  "slide4": {
+    "title": "Python Environment Setup",
+    "speaker_notes": "Proper environment setup is crucial for successful Python development. This section covers installation, virtual environments, and package management."
+  },
+  "slide5": {
+    "title": "Installing Python",
+    "content": "1. Download Python from the official website: [python.org](https://www.python.org/downloads/)\n2. Run the installer and follow the instructions\n3. Verify the installation in your terminal/command prompt:\n\n```bash\nPS C:\\> python --version\n```",
+    "speaker_notes": "The official Python website provides the latest stable version for download. The installer includes the Python interpreter, pip (package manager), and IDLE (a basic IDE)."
+  },
+  "slide6": {
+    "title": "Introduction to Virtual Environments",
+    "content": "Virtual environments help isolate project dependencies. Create a virtual environment using the following command:\n\n```bash\nPS C:\\> python -m venv my_project_env\n```\n\nActivate the virtual environment:\n\n   - Windows:\n\n   ```bash\n   PS C:\\> my_project_env\\Scripts\\activate\n   ```\n\n   - macOS/Linux:\n\n   ```bash\n   ~: $ source my_project_env/bin/activate\n   ```",
+    "speaker_notes": "Virtual environments prevent package conflicts between different projects. Each virtual environment has its own Python interpreter and package installation location. Activating a virtual environment changes the Python interpreter and package location for the current terminal session."
+  },
+  "slide7": {
+    "title": "Installing and Managing Packages with pip",
+    "content": "Install packages using pip:\n\nbash\nPS C:\\> pip install package_name\n\n\nList installed packages:\n\nbash\nPS C:\\> pip list\n\n\nUninstall packages:\n\nbash\nPS C:\\> pip uninstall package_name\n\n\nSave and load dependencies:\n\nbash\nPS C:\\> pip freeze > requirements.txt\nPS C:\\> pip install -r requirements.txt\n",
+    "speaker_notes": "pip is the default package manager for Python. It allows you to install, update, and remove packages from the Python Package Index (PyPI). You can also use pip to manage your project's dependencies by saving them to a requirements.txt file."
+  },
+  "slide8": {
+    "title": "Python Syntax Basics",
+    "speaker_notes": "This section covers fundamental Python syntax in more detail. Familiarity with programming concepts from Java and JavaScript will make learning Python syntax easier."
+  },
+  "slide9": {
+    "title": "Variables in Python",
+    "content": "Dynamically typed. No need to declare types, just assign values.\n\n```python\nnumber = 42\npi = 3.14\n```",
+    "speaker_notes": "Python variables are dynamically typed, allowing you to assign values directly without declaring the variable's type beforehand."
+  },
+  "slide10": {
+    "title": "Basic Data Types",
+    "content": "int, float, str, bool, list, tuple, dict, set\n\n```python\ntext = \"Hello, world!\"\nis_true = True\nmy_list = [1, 2, 3]\nmy_tuple = (4, 5, 6)\nmy_dict = {\"key\": \"value\"}\nmy_set = {7, 8, 9}\n```",
+    "speaker_notes": "Common data types in Python include numbers (integers and floats), strings, booleans, lists, tuples, dictionaries, and sets."
+  },
+  "slide11": {
+    "title": "if-else Statements",
+    "content": "```python\nif condition:\n    # code when condition is True\nelse:\n    # code when condition is False\n```",
+    "speaker_notes": "Python's if-else statements are similar to those in JavaScript and Java. The main difference is that Python uses indentation instead of curly braces to indicate code blocks."
+  },
+  "slide12": {
+    "title": "for Loops",
+    "content": "```python\nfor item in iterable:\n    # code for each item\n```",
+    "speaker_notes": "Python's for loops iterate over a sequence (e.g., lists, strings) using the `in` keyword. The loop runs once for each item in the sequence, in order."
+  },
+  "slide13": {
+    "title": "while Loops",
+    "content": "```python\nwhile condition:\n    # code while condition is True\n```",
+    "speaker_notes": "Python's while loops execute a block of code as long as the specified condition is true."
+  },
+  "slide14": {
+    "title": "Functions in Python",
+    "content": "Defining and calling functions\n\n```python\ndef greet(name):\n    print(f\"Hello, {name}!\")\n\ngreet(\"Alice\")\n```",
+    "speaker_notes": "Functions in Python are defined using the `def` keyword. They allow you to write reusable code and simplify complex programs."
+  },
+  "slide15": {
+    "title": "Defining Classes in Python",
+    "content": "```python\nclass Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def bark(self):\n        print(f\"{self.name} barks!\")\n```",
+    "speaker_notes": "Classes in Python are defined using the `class` keyword. The `__init__` method is a constructor that initializes object attributes. The `self` parameter refers to the instance of the class."
+  },
+  "slide16": {
+    "title": "Instantiating and Using Objects",
+    "content": "```python\nmy_dog = Dog(\"Fido\")\nmy_dog.bark()\n```",
+    "speaker_notes": "This section covers Python file organization, importing modules and packages, and creating custom modules."
+  },
+  "slide18": {
+    "title": "File Organization",
+    "content": "Organize your code in files with a .py extension. Use folders to group related files and create packages.\n\n\nmy_project/\n main.py\n my_package/\n __init__.py\n my_module.py\n",
+    "speaker_notes": "Python files are organized using a simple hierarchy of files and folders. Packages are just folders containing an __init__.py file and other Python files."
+  },
+  "slide19": {
+    "title": "Importing Modules and Packages",
+    "content": "Import a module or package using the import keyword.\n\npython\nimport math\nimport os.path\n\n\nImport specific functions or classes using the from keyword.\n\npython\nfrom math import sqrt\nfrom os.path import join\n",
+    "speaker_notes": "The import statement allows you to use functions, classes, and variables defined in other modules or packages. The from keyword allows you to import specific functions or classes without importing the whole module."
+  },
+  "slide20": {
+    "title": "Creating Custom Modules",
+    "content": "Define functions, classes, or variables in a .py file. Import and use them in another .py file.\n\nmy_module.py:\npython\ndef custom_function():\n print(\"This is a custom function.\")\n\n\nmain.py:\npython\nfrom my_module import custom_function\n\ncustom_function()\n",
+    "speaker_notes": "Creating custom modules helps to organize your code and promote code reuse. You can import and use your custom modules just like built-in modules."
+  },
+  "slide21": {
+    "title": "Python Built-in File Manipulation",
+    "speaker_notes": "In this section, we will discuss some of the built-in file manipulation tools available in Python, including reading and writing files."
+  },
+  "slide22": {
+    "title": "Opening and Closing Files",
+    "content": "Use the open() function to open a file, and the close() method to close it:\n\npython\nfile = open('example.txt', 'r')\n# Perform operations on the file\nfile.close()\n",
+    "speaker_notes": "The open() function returns a file object, which can be used to read or write the file. The first argument is the file path, and the second argument is the file mode ('r' for read, 'w' for write, 'a' for append, etc.). Always close a file after use to free up system resources."
+  },
+  "slide23": {
+    "title": "Reading from Files",
+    "content": "Read the entire file:\n\npython\ncontent = file.read()\n\n\nRead a single line:\n\npython\nline = file.readline()\n\n\nRead all lines into a list:\n\npython\nlines = file.readlines()\n",
+    "speaker_notes": "Python provides several methods to read data from a file. The read() method reads the entire file content, while the readline() method reads a single line. The readlines() method reads all lines and returns them as a list."
+  },
+  "slide24": {
+    "title": "Writing to Files",
+    "content": "Write to a file:\n\npython\nfile.write('Hello, world!')\n\n\nWrite multiple lines:\n\npython\nfile.writelines(['line1', 'line2', 'line3'])\n",
+    "speaker_notes": "To write data to a file, open the file in write ('w') or append ('a') mode. The write() method writes a string to the file, while the writelines() method writes a list of strings as separate lines."
+  },
+  "slide25": {
+    "title": "Using the 'with' Statement",
+    "content": "Automatically close files after use:\n\npython\nwith open('example.txt', 'r') as file:\n content = file.read()\n# File is automatically closed\n",
+    "speaker_notes": "Using the 'with' statement ensures that the file is closed automatically when the block of code is exited. This is a best practice and helps prevent resource leaks."
+  },
+  "slide26": {
+    "title": "Light Automation with Python",
+    "speaker_notes": "In this section, we will discuss using Python for light automation tasks, such as working with the OS, executing shell commands, and automating file operations."
+  },
+  "slide27": {
+    "title": "Working with the OS",
+    "content": "Import the os module to work with the OS:\n\npython\nimport os\n\n\nGet the current working directory:\n\npython\ncwd = os.getcwd()\n\n\nChange the current working directory:\n\npython\nos.chdir('path/to/directory')\n",
+    "speaker_notes": "The os module provides a way to work with the operating system. You can use it to perform various operations such as getting and changing the current working directory."
+  },
+  "slide28": {
+    "title": "Executing Shell Commands",
+    "content": "Import the subprocess module to execute shell commands:\n\npython\nimport subprocess\n\n\nRun a shell command and get the output:\n\npython\noutput = subprocess.check_output(['command', 'arg1', 'arg2'])\n",
+    "speaker_notes": "The subprocess module allows you to execute shell commands from your Python script. The check_output() function runs the specified command and returns the output as a string."
+  },
+  "slide29": {
+    "title": "Automating File Operations",
+    "content": "Import the shutil module to automate file operations:\n\npython\nimport shutil\n\n\nCopy a file:\n\npython\nshutil.copy('source.txt', 'destination.txt')\n\n\nMove a file:\n\npython\nshutil.move('source.txt', 'destination.txt')\n",
+    "speaker_notes": "The shutil module provides high-level file operations such as copying and moving files. This can be useful for automating file management tasks in your Python scripts."
+  },
+  "slide30": {
+    "title": "Simple Project: Web Scraping",
+    "speaker_notes": "In this section, we will introduce a simple Python project that demonstrates web scraping using the Beautiful Soup library. This will provide a practical application of the concepts covered in the previous sections."
+  },
+  "slide31": {
+    "title": "Installing Beautiful Soup",
+    "content": "Install Beautiful Soup and the requests library using pip:\n\nbash\nPS C:\\> pip install beautifulsoup4 requests\n",
+    "speaker_notes": "Beautiful Soup is a popular Python library for web scraping. It requires the requests library to fetch web pages. Install both using pip."
+  },
+  "slide32": {
+    "title": "Fetching a Web Page",
+    "content": "Import the requests library and fetch a web page:\n\npython\nimport requests\n\nurl = 'https://example.com'\nresponse = requests.get(url)\n\nhtml_content = response.text\n",
+    "speaker_notes": "The requests library makes it easy to fetch web pages. Use the get() function to send an HTTP GET request and retrieve the page content as a string."
+  },
+  "slide33": {
+    "title": "Parsing HTML with Beautiful Soup",
+    "content": "Import Beautiful Soup and parse the HTML content:\n\npython\nfrom bs4 import BeautifulSoup\n\nsoup = BeautifulSoup(html_content, 'html.parser')\n",
+    "speaker_notes": "Beautiful Soup provides an easy way to parse HTML content and extract information from web pages. Create a BeautifulSoup object with the HTML content and the desired parser (e.g., 'html.parser')."
+  },
+  "slide34": {
+    "title": "Navigating and Searching the HTML Tree",
+    "content": "Find an element by tag name:\n\npython\nelement = soup.find('tag_name')\n\n\nFind all elements with a specific tag:\n\npython\nelements = soup.find_all('tag_name')\n\n\nFind an element with specific attributes:\n\npython\nelement = soup.find('tag_name', attrs={'attribute_name': 'value'})\n",
+    "speaker_notes": "Beautiful Soup provides methods to navigate and search the HTML tree. Use the find() method to find the first element with a specific tag name or attributes, and the find_all() method to find all matching elements."
+  },
+  "slide35": {
+    "title": "Extracting Data from HTML Elements",
+    "content": "Get the text content of an element:\n\npython\ntext = element.text\n\n\nGet the value of an attribute:\n\npython\nattribute_value = element['attribute_name']\n",
+    "speaker_notes": "Once you have an HTML element, you can extract data from it, such as its text content or attribute values. Use the text attribute to get the text content of an element, and the square bracket notation to get the value of an attribute."
+  },
+  "slide36": {
+    "title": "Example: Scraping Quotes",
+    "content": "Scrape quotes from a web page:\n\npython\nimport requests\nfrom bs4 import BeautifulSoup\n\nurl = 'https://quotes.toscrape.com/'\nresponse = requests.get(url)\nsoup = BeautifulSoup(response.text, 'html.parser')\n\nquotes = soup.find_all('div', class_='quote')\n\nfor quote in quotes:\n text = quote.find('span', class_='text').text\n author = quote.find('small', class_='author').text\n print(f'\"{text}\" - {author}')\n",
+    "speaker_notes": "Here's an example of using Beautiful Soup and the requests library to scrape quotes from a web page. This script fetches the web pagecontent, parses it with Beautiful Soup, finds all 'div' elements with the class 'quote', and extracts the quote text and author for each quote. Finally, it prints the quotes and their authors. This example demonstrates how to combine various concepts covered in the previous sections to create a simple web scraping project."
+  },
+  "slide37": {
+    "title": "Conclusion",
+    "content": "In this course, we covered:\n\n1. Python's history and popularity\n2. Python syntax and basic data structures\n3. Functions and control structures\n4. Virtual environments and package management\n5. Built-in file manipulation tools\n6. Light automation tasks\n7. A simple web scraping project\n\nWith these fundamentals, you can continue exploring Python and its many applications!",
+    "speaker_notes": "We've given you an overview of Python, touching on its history, syntax, basic data structures, and core concepts. We also discussed Python virtual environments, package management, and built-in file manipulation tools, as well as showed you how to use Python for light automation tasks and a simple web scraping project. With this foundation, you can continue learning Python and discovering its vast potential in various applications and projects. Good luck!"
+  }
+}
