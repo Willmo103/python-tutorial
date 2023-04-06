@@ -13,7 +13,7 @@ def next_slide():
 
     slide = list(data.keys())[current_position - 1]
 
-    content = data[slide].get("content", "")
+    content = data[slide].get("content", "").split("\n")
     speaker_notes = data[slide].get("speaker_notes", "")
 
     with open("main.py", "a") as main_file:

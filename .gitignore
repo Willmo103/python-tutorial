@@ -1,0 +1,9 @@
+*
+!.gitignore
+!*.json
+!setup.py
+!cli.py
+!config.ini
+!speaker_notes.txt
+!main.py
+!requirements.txt
