@@ -16,21 +16,26 @@ def next_slide():
     title = data[slide].get("title", "")
     content = (
         data[slide].get("content", "").split("\n")
-        if len(data[slide].get("content", "")) > 1
+        if len(data[slide].get("content", "").split("\n")) > 1
         else data[slide].get("content", "").split(".")
     )
-    speaker_notes = data[slide].get("speaker_notes", "").split("\n")
+    speaker_notes = data[slide].get("speaker_notes", "").split(".")
 
     with open("main.py", "a") as main_file:
-        main_file.write(f"# {title}\n")
+        main_file.write(f"# {title.upper()}\n\n")
         if len(content) > 2:
             for line in content:
-                main_file.write(f"# {line}\n")
+                if line.startswith("```") or line.startswith("```bash") or line.startswith("python"):
+                    continue
+                elif line.startswith("PS"):
+                    main_file.write(f"\n#\t{line.strip()}\n")
+                else:
+                    main_file.write(f"# {line.strip()}\n") if line.strip() else None
         main_file.write("\n######\n\n")
 
     with open("speaker_notes.txt", "a") as notes_file:
         notes_file.write(f"{slide}\n")
-        notes_file.write(f"{title}\n")
+        notes_file.write(f"{title.strip}\n")
         for line in speaker_notes:
             notes_file.write(f"{line}\n")
         notes_file.write("\n\n    ~~~~~~~~    \n\n")
