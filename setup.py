@@ -8,8 +8,9 @@ setup(
     install_requires=[
         "click",
     ],
-    entry_points='''
+    entry_points="""
         [console_scripts]
         next=cli:next_slide
-    ''',
+        reset=cli:reset
+    """,
 )
