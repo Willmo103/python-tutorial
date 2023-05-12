@@ -22,6 +22,7 @@ def next_slide():
     speaker_notes = data[slide].get("speaker_notes", "").split(".")
 
     with open("main.py", "a") as main_file:
+        main_file.write(f"# SLIDE: {current_position}")
         main_file.write(f"# {title.upper()}\n\n")
         if len(content) > 2:
             for line in content:
@@ -34,11 +35,11 @@ def next_slide():
         main_file.write("\n######\n\n")
 
     with open("speaker_notes.txt", "a") as notes_file:
-        notes_file.write(f"{slide}\n")
-        notes_file.write(f"{title.strip}\n")
+        notes_file.write(f"SLIDE: {current_position}\n")
+        notes_file.write(f"{title.upper()}\n")
         for line in speaker_notes:
-            notes_file.write(f"{line}\n")
-        notes_file.write("\n\n    ~~~~~~~~    \n\n")
+            notes_file.write(f"{line.strip()}\n")
+        notes_file.write("   ~~~~~~~~    \n\n")
 
     config.set("position", "current", str(current_position + 1))
     with open("config.ini", "w") as config_file:
